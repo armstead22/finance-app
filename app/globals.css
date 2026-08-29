@@ -19,6 +19,28 @@ button { cursor: pointer; }
 .icon-button i { position: absolute; width: 6px; height: 6px; background: var(--gain); border-radius: 50%; top: 10px; right: 9px; }
 .avatar { background: #34383d; border-radius: 50%; font-size: 12px; font-weight: 700; min-width: 32px; min-height: 32px; }
 .content { padding: 8px 20px 0; }
+.asset-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.asset-tabs button { color: var(--muted-foreground); background: transparent; border: 0; min-height: 44px; padding: 0 5px; font-size: 14px; font-weight: 700; position: relative; }
+.asset-tabs button.active { color: var(--foreground); }
+.asset-tabs button.active::after { content: ''; position: absolute; left: 5px; right: 5px; bottom: -1px; height: 2px; background: var(--gain); border-radius: 2px; }
+.muted { color: var(--muted-foreground); font-size: 14px; font-weight: 500; letter-spacing: 0; }
+.segmented { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: #191b1e; border-radius: 10px; padding: 4px; margin: 20px 0 15px; }
+.segmented button { min-height: 40px; border: 0; border-radius: 7px; background: transparent; color: var(--muted-foreground); font-weight: 700; }
+.segmented button.active { background: #34383d; color: var(--foreground); }
+.chain-head, .chain-row { display: grid; grid-template-columns: .8fr 1fr .9fr 16px; align-items: center; gap: 8px; }
+.chain-head { color: var(--muted-foreground); font-size: 11px; padding: 7px 0; text-transform: uppercase; letter-spacing: .05em; }
+.chain-row { width: 100%; min-height: 62px; padding: 8px 0; border: 0; border-top: 1px solid var(--border); background: transparent; color: var(--foreground); text-align: left; }
+.chain-row span { color: var(--gain); font-weight: 700; }
+.chain-row small { color: var(--muted-foreground); font-size: 11px; line-height: 1.5; }
+.chain-row svg { color: #5e636a; }
+.disclaimer { color: var(--muted-foreground); font-size: 11px; line-height: 1.5; margin: 18px 0 4px; }
+.education { margin-top: 30px; }
+.knowledge-card { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; background: #191b1e; color: var(--foreground); border: 1px solid var(--border); border-radius: 13px; padding: 15px 13px; min-height: 92px; }
+.knowledge-card > span:nth-child(2) { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+.knowledge-card strong { font-size: 14px; }
+.knowledge-card small { color: var(--muted-foreground); font-size: 12px; line-height: 1.5; }
+.knowledge-icon { width: 36px; height: 36px; border-radius: 10px; background: #293c35; color: var(--gain); display: grid; place-items: center; flex: 0 0 auto; }
+.knowledge-card > svg { color: #5e636a; flex: 0 0 auto; }
 .eyebrow { color: var(--muted-foreground); font-size: 13px; font-weight: 600; letter-spacing: .02em; }
 .portfolio-head { padding: 14px 0 28px; }
 .portfolio-value { font-size: clamp(40px, 11vw, 56px); line-height: 1.08; font-weight: 700; letter-spacing: -2.5px; margin: 7px 0 8px; }
