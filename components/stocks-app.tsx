@@ -34,7 +34,7 @@ export default function StocksApp() {
   const current = asset === 'Crypto' ? crypto[0] : selected
   const action = (label: string) => { setNotice(`${label} order ready for ${current.symbol}`); window.setTimeout(() => setNotice(''), 2600) }
   return <main className="broker-shell">
-    <header className="topbar"><div className="brand-mark">arc</div><div className="header-actions"><button className="icon-button" aria-label="Search"><Search size={20} /></button><button className="icon-button" aria-label="Notifications"><Bell size={20} /><i /></button><button className="avatar" aria-label="Profile">JD</button></div></header>
+    <header className="topbar"><div className="brand-mark">Signal</div><div className="header-actions"><button className="icon-button" aria-label="Search"><Search size={20} /></button><button className="icon-button" aria-label="Notifications"><Bell size={20} /><i /></button><button className="avatar" aria-label="Profile">JD</button></div></header>
     <div className="content">
       <div className="asset-tabs" role="tablist">{['Stocks', 'Options', 'Crypto'].map((name) => <button key={name} className={asset === name ? 'active' : ''} onClick={() => setAsset(name)} role="tab" aria-selected={asset === name}>{name}</button>)}</div>
       {asset === 'Options' ? <>
