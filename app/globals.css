@@ -40,6 +40,17 @@ button { cursor: pointer; }
 .chain-row small { color: var(--muted-foreground); font-size: 11px; line-height: 1.5; }
 .chain-row svg { color: #5e636a; }
 .disclaimer { color: var(--muted-foreground); font-size: 11px; line-height: 1.5; margin: 18px 0 4px; }
+.scout-card { margin-top: 30px; padding: 17px 15px; border: 1px solid #3b4534; border-radius: 15px; background: linear-gradient(135deg, #1a241d, #151b17); }
+.scout-card .section-title { margin-bottom: 7px; }
+.scout-intro { margin: 0 0 13px; color: var(--muted-foreground); font-size: 13px; line-height: 1.5; }
+.scout-form { display: flex; gap: 8px; }
+.scout-form input { min-width: 0; flex: 1; min-height: 46px; padding: 0 12px; border: 1px solid var(--border); border-radius: 10px; color: var(--foreground); background: #0f1410; font-size: 16px; outline: none; }
+.scout-form input:focus { border-color: var(--warning); }
+.scout-form button { min-width: 58px; min-height: 46px; border: 0; border-radius: 10px; color: var(--primary-foreground); background: var(--warning); font-weight: 800; }
+.scout-form button:disabled { opacity: .55; cursor: wait; }
+.scout-answer { margin-top: 13px; padding: 12px; border-radius: 10px; background: #0f1410; border: 1px solid var(--border); }
+.scout-answer strong { color: var(--warning); font-size: 13px; }
+.scout-answer p { margin: 5px 0 0; color: var(--foreground); font-size: 14px; line-height: 1.55; }
 .education { margin-top: 30px; }
 .knowledge-card { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; background: #191b1e; color: var(--foreground); border: 1px solid var(--border); border-radius: 13px; padding: 15px 13px; min-height: 92px; }
 .knowledge-card > span:nth-child(2) { flex: 1; display: flex; flex-direction: column; gap: 5px; }
