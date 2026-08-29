@@ -15,6 +15,10 @@ button { cursor: pointer; }
 .topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 20px 16px; }
 .brand-mark { font-size: 25px; font-weight: 800; letter-spacing: -1.5px; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
+.mascot-promo { width: 48px; height: 48px; margin-left: auto; margin-right: 2px; padding: 0; border: 1px solid #3b4534; border-radius: 14px; background: #20281f; display: grid; place-items: center; overflow: hidden; transition: transform .18s ease, border-color .18s ease; }
+.mascot-promo:hover { transform: translateY(-2px) rotate(2deg); border-color: var(--warning); }
+.mascot-promo:active { transform: scale(.96); }
+.mascot-promo img { width: 43px; height: 43px; object-fit: contain; }
 .icon-button, .avatar, .star-button { border: 0; background: transparent; color: var(--foreground); min-width: 44px; min-height: 44px; display: grid; place-items: center; position: relative; }
 .icon-button i { position: absolute; width: 6px; height: 6px; background: var(--gain); border-radius: 50%; top: 10px; right: 9px; }
 .avatar { background: #34383d; border-radius: 50%; font-size: 12px; font-weight: 700; min-width: 32px; min-height: 32px; }
