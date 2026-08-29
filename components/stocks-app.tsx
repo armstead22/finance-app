@@ -19,6 +19,8 @@ const crypto = [
 const contracts = [{ strike: 220, call: '8.40', put: '1.28', volume: '12.4K', iv: '28.7%' }, { strike: 225, call: '5.65', put: '2.44', volume: '8.1K', iv: '26.9%' }, { strike: 230, call: '3.18', put: '4.82', volume: '18.9K', iv: '25.4%' }, { strike: 235, call: '1.54', put: '8.12', volume: '5.7K', iv: '24.8%' }]
 const knowledge = [{ title: 'What is a put option?', body: 'A put gives the buyer the right, but not the obligation, to sell an underlying asset at a chosen strike price before expiration.' }, { title: 'Greeks: Delta', body: 'Delta estimates how much an option price may change when the underlying moves by one dollar. It is not a guarantee.' }, { title: 'Know the risks', body: 'Options can expire worthless, and selling options can create significant or unlimited loss. Review the full contract before trading.' }]
 const ranges = ['1D', '1W', '1M', '3M', '1Y', 'ALL']
+const leaderboard = [{ name: 'ChartPilot', return: '+42.8%', badge: 'Market Maker' }, { name: 'ValueSeeker', return: '+31.4%', badge: 'Steady Hand' }, { name: 'JD (you)', return: '+18.6%', badge: 'Rising Signal' }, { name: 'LongTermSam', return: '+14.2%', badge: 'Diversified' }]
+const badges = ['First fill', 'Green week', 'Risk aware']
 
 function Chart({ change }: { change: number }) {
   const points = useMemo(() => { const base = [42,49,46,54,47,60,56,64,58,66,61,73,69,77,72,84,78,88,82,91,86,95,92,104,99,111,105,118,113,124,119,133,127,139,136,148,143,158,152,166,160,176,169,184,178,195,188,204]; return change < 0 ? base.map((p, i) => p - i * 3.8) : base }, [change])
