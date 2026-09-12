@@ -3,9 +3,10 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Arc — Invest with clarity',
-  description: 'A focused portfolio and market visualizer for your everyday investing.',
+  title: 'Signal — Learn the market safely',
+  description: 'Signal is a paper-trading and market education app for practicing stocks, options, and crypto without real-money risk.',
   generator: 'v0.app',
+  manifest: '/manifest.webmanifest',
 }
 
 export const viewport: Viewport = {
