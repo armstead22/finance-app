@@ -1,0 +1,5 @@
+import Link from 'next/link'
+
+export default function SupportPage() {
+  return <main className="legal-page"><div className="legal-card"><Link href="/" className="legal-back">← Back to Signal</Link><p className="eyebrow">Signal support</p><h1>How can we help?</h1><p className="legal-lede">Signal is currently a demo and paper-trading experience. We never need your bank password or brokerage credentials.</p><div className="support-list"><section><h2>Report a problem</h2><p>Include the screen, device, and steps that caused the issue. Never include passwords, account numbers, or payment details.</p></section><section><h2>Safety concern</h2><p>If content appears to encourage real-money trading or guaranteed returns, stop using it and report the screen for review.</p></section><section><h2>Contact</h2><p>Email support@example.com until a production support channel is configured.</p></section></div><Link href="/terms" className="legal-link">Read Terms of Use</Link><Link href="/privacy" className="legal-link">Read Privacy Policy</Link></div></main>
+}
