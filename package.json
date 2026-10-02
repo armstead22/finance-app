@@ -5,10 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "export": "next build",
+    "start": "next start",
+    "cap:sync": "next build && npx cap sync ios && npx cap sync android",
+    "ios:open": "npx cap open ios",
+    "android:open": "npx cap open android"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
     "@vercel/analytics": "1.6.1",
     "@vercel/speed-insights": "^2.0.0",
     "ai": "^7.0.84",
