@@ -13,7 +13,11 @@ export async function POST(request: Request) {
       maxOutputTokens: 450,
     })
     return Response.json({ answer: result.text })
-  } catch {
-    return Response.json({ answer: 'Delta is an estimate of how much an option may move when the underlying asset moves by $1. It can help explain sensitivity, but it is not a prediction or guarantee. Scout’s live AI is temporarily unavailable, so please use the learning cards for more guidance.' })
+  } catch (error) {
+    console.error('[scout] request failed', error)
+    return Response.json(
+      { error: 'Scout is unavailable right now. Try again soon, or use the learning cards.' },
+      { status: 503 },
+    )
   }
 }
