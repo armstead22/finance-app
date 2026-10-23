@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Signal</string>
+    <string name="title_activity_main">Signal</string>
+    <string name="package_name">com.signal.finance</string>
+    <string name="custom_url_scheme">com.signal.finance</string>
+</resources>
