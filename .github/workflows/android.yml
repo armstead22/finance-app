@@ -1,0 +1,56 @@
+name: Android
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "android/**"
+      - "app/**"
+      - "components/**"
+      - "public/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/android.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build web assets
+        run: pnpm run build
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build Android AAB
+        working-directory: android
+        run: ./gradlew bundleRelease
+
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: signal-android-aab
+          path: android/app/build/outputs/bundle/release/*.aab
